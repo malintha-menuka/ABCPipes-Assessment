@@ -1,4 +1,4 @@
-## ABC Pipes – Acumatica Purchase Order Customization Assessment
+# ABC Pipes – Acumatica Purchase Order Customization Assessment
 
 ## Approach
 
@@ -6,27 +6,26 @@
 
 2. Created a customization project targeting the Purchase Orders screen (PO301000).
 
-3. Added a custom field named 'Warehouse Sync Status' to support:
+3. Added a custom field named `Warehouse Sync Status` to support:
    - Pending
    - Synced
    - Failed
 
 4. Implemented DAC extensions and helper classes for constants and reusable messages.
 
-5. Added a custom action named 'Mark as Synced' with validation to prevent execution while the Purchase Order is on Hold.
+5. Added a custom action named `Mark as Synced` and configured it to be disabled when the Purchase Order is on Hold.
 
 6. Implemented a sample integration/service class (`WarehouseSyncService`) to prepare Purchase Order data as a JSON payload and display it through Acumatica Trace for demonstration purposes.
 
-7. Added a 'Test Sync' action to execute the sample integration logic.
+7. Added a `Test Sync` action to execute the sample integration logic and configured it to be disabled when the Purchase Order is on Hold.
 
-8. Built, published, and tested the customization successfully in Classic UI.
+8. Added Modern UI support for the custom field on the Purchase Orders screen and verified custom actions in Modern UI.
+
+9. Built, published, and tested the customization successfully in both Classic UI and Modern UI.
 
 
 ## Assumptions
 
-- The customization was implemented and fully tested in Classic UI.
-- Modern UI support was partially explored during implementation.
-- Modern UI compilation could not be fully completed due to repeated frontend/NPM build issues during screen compilation.
 - The integration implementation is provided as a demonstration/sample service approach rather than a production-ready external integration.
 
 
